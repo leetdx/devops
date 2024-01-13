@@ -1,0 +1,4 @@
+# https://crontab.guru
+
+# backup mysql
+30 2 * * * /home/$(whoami)/backup/mysql-backup.sh
