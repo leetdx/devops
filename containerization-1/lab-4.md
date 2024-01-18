@@ -39,8 +39,12 @@ Mapping port: 13336 từ host → 3306 trên container mysql
 - MYSQL_ROOT_PASSWORD
 
 ```bash
+docker create volume data_mysql_tech
+
+docker volume ls
+
 docker run -dp 13336:3306 --name mysql-tech \
--v ./data_mysql_tech:/var/lib/mysql \
+-v data_mysql_tech:/var/lib/mysql \
 -e MYSQL_DATABASE=db_uni_education \
 -e MYSQL_USER=admin \
 -e MYSQL_PASSWORD=admin@12345 \
