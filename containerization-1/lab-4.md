@@ -29,14 +29,14 @@ docker run -dp 8000:8080 --name my-java-app orezfu/java-app:v1
 Yêu cầu:
 
 Mapping port: 13336 từ host → 3306 trên container mysql
-Tên container: "mysql-tech"
-Chạy ngầm container.
-Lưu trữ dữ liệu DB ra ngoài host với volume có tên "data_mysql_tech"
-Có các biến môi trường, giá trị của biến môi trường các bạn tự tạo.
-MYSQL_DATABASE
-MYSQL_USER
-MYSQL_PASSWORD
-MYSQL_ROOT_PASSWORD
+- Tên container: "mysql-tech"
+- Chạy ngầm container.
+- Lưu trữ dữ liệu DB ra ngoài host với volume có tên "data_mysql_tech"
+- Có các biến môi trường, giá trị của biến môi trường các bạn tự tạo.
+- MYSQL_DATABASE
+- MYSQL_USER
+- MYSQL_PASSWORD
+- MYSQL_ROOT_PASSWORD
 
 ```bash
 docker run -dp 13336:3306 --name mysql-tech \
