@@ -39,7 +39,7 @@ Mapping port: 13336 từ host → 3306 trên container mysql
 - MYSQL_ROOT_PASSWORD
 
 ```bash
-docker create volume data_mysql_tech
+docker volume create data_mysql_tech
 
 docker volume ls
 
@@ -50,6 +50,10 @@ docker run -dp 13336:3306 --name mysql-tech \
 -e MYSQL_PASSWORD=admin@12345 \
 -e MYSQL_ROOT_PASSWORD=root@123456 \
 mysql:latest
+
+PASSWORD=admin@12345
+
+docker exec -it mysql-tech sh -c 'mysql -uadmin -p"$PASSWORD"'
 ```
 
 ## Luyện tập 3: Xóa các container trong luyện tập 0, 1 và 2
