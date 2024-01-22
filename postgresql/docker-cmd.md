@@ -12,9 +12,9 @@ docker run -dp 5432:5432 \
     postgres:16
 ```
 
-## PGDATA
+### PGDATA
 
-### Important Note
+#### Important Note
 when mounting a volume to **/var/lib/postgresql**, the **/var/lib/postgresql/data** path is a local volume from the container runtime, thus data is not persisted on the mounted volume.
 
 This optional variable can be used to define another location - like a subdirectory - for the database files. The default is **/var/lib/postgresql/data**. If the data volume you're using is a filesystem mountpoint (like with GCE persistent disks), or remote folder that cannot be chowned to the postgres user (like some NFS mounts), or contains folders/files (e.g. lost+found), Postgres initdb requires a subdirectory to be created within the mountpoint to contain the data.
